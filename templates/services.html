@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Services</title>
+{% endblock %}
+
+{% block nav %}
+<nav class="nav">
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/contact">contact</a></li>
+        <li><a href="/tasks">tasks</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block body %}
+<div class="parent">
+    <div class="text">Services</div>
+    <div class="subtext msg">We provide following services</div>
+    <div class="services subtext">
+        <li>Task management web application</li>
+        <li>UI/UX Design</li>
+        <li>Front end developement</li>
+    </div>
+    <a href="/contact" class="hire_btn">Hire now!</a>
+</div>
+{% endblock %}
+
+{% block scripts  %}
+<script>
+    setTimeout(() => {
+        parent_box.style.opacity = '1'
+    }, 300);
+</script>
+{% endblock  %}

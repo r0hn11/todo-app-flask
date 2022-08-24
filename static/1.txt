@@ -1,0 +1,2 @@
+such useless files should not be placed in static folder since they can be accessed from url itself.
+Only files like css files, js files, required images should be placed in this folder

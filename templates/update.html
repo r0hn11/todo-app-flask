@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Tasks</title>
+{% endblock %}
+
+{% block nav %}
+<nav class="nav">
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/contact">contact</a></li>
+        <li><a href="/services">services</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <a href="/tasks" class="ttl">Update Task</a>
+
+    <form action="/tasks/update/{{upd_task.sno}}" method="POST">
+        <div class="title inputs">
+            <label for="taskname">Task title</label>
+            <input type="text" id="taskname" name="title" value="{{upd_task.title}}">
+        </div>
+        <div class="desc inputs">
+            <label for="taskdesc">Task description</label>
+            <input id="taskdesc" name="descr" value="{{upd_task.desc}}"></input>
+        </div>
+        <button type="submit">Update task</button>
+    </form>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const taskbox = document.querySelector('.container')
+    taskbox.style.marginTop = nav.offsetHeight+50+'px'
+    setTimeout(function(){
+        taskbox.style.opacity = '1'
+    },500)
+    window.addEventListener('resize', function(){
+        let flag = 0
+        taskbox.style.marginTop = nav.offsetHeight+20+'px'
+    })
+</script>
+{% endblock %}

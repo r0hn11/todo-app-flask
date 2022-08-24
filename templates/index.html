@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block nav %}
+<nav class="nav">
+    <ul>
+        <li><a href="/services">services</a></li>
+        <li><a href="/contact">contact</a></li>
+        <li><a href="/tasks">tasks</a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block body %}
+<div class="parent">
+    <div class="text wc">Welcome</div>
+    <div class="subtext_par description">
+        <div class="subtext wc_msg">This is the minimal Flask task management application.</div>
+        <div class="subtext wc_msg">
+            Click 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg>
+            on top of screen to expand the menu.
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts  %}
+<script>
+    setTimeout(() => {
+        parent_box.style.opacity = '1'
+    }, 300);
+</script>
+{% endblock  %}
